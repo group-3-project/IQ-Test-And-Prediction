@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+        form{
+           margin: 50px; 
+          
+        }
+
+    </style>
+  </head>
+  <body>
+    {% include "quiz/navbar.html" %}
+    <h3 style="text-align: center; margin-top: 100px;">STUDENT SIGNUP</h3>
+    <form method="POST" autocomplete="off" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group col-md-6 field">
+            <label for="username">Username:</label>
+            {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="Username" %}
+          </div>
+          <div class="form-group col-md-6 field">
+            <label for="inputPassword4">Password:</label>
+            {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="Password" %}
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6 field">
+            <label for="age">Age:</label>
+            {% render_field studentForm.age|attr:'required:true'  class="form-control" placeholder="Age" %}
+          </div>
+            <div class="form-group col-md-6 field">
+              <label for="profile_pic">Profile Picture:</label>
+              {% render_field studentForm.profile_pic|attr:'required:true' class="form-control" placeholder="" %}
+            </div>
+          </div>
+      <div style="text-align: center; padding: 10px;">
+          <button type="submit" class="btn btn-primary" style="background-color: grey; border: 2px solid black;">Sign Up</button>
+      </div>
+    </form>
+    {% include "quiz/footer.html" %}
+  </body>
+</html>
