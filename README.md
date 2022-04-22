@@ -1,10 +1,6 @@
 # IQ Quiz And Prediction
 ## Functions
 ### Admin
-- Create Admin account using command
-```
-py manage.py createsuperuser
-```
 - After Login, can see Total Number Of Student, Categories, Questions are there in system on Dashboard.
 - Can View, Update, Delete Student.
 - Can Also See Student Marks.
