@@ -8,9 +8,13 @@ class Student(models.Model):
    
     @property
     def get_name(self):
-        return self.user.first_name+" "+self.user.last_name
+        return self.user.username
     @property
     def get_instance(self):
         return self
     def __str__(self):
         return self.user.first_name
+
+    @property
+    def get_age(self):
+        return self.age
