@@ -13,4 +13,3 @@
 - Can Give Quiz, There Is No Limit On Number Of Attempt.
 - Can View Marks Of Each Attempt Of Each Quiz.
 - Question Pattern Is MCQ With 4 Options And 1 Correct Answer.
----
